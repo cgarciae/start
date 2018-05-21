@@ -146,7 +146,7 @@ source "/home/cristian/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 
 
 # anaconda
-export PATH="/home/cristian/anaconda2/bin:$PATH"
+export PATH="/home/cristian/anaconda3/bin:$PATH"
 source activate root
 
 # pyenv
