@@ -6,11 +6,17 @@ sudo apt-get install -y \
     git \
     zsh \
     tmux \
-    keychain
+    keychain \
+    curl
+
 
 
 # install anaconda
-sh -c "$(wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh -O -)"
+CUR_DIR=$(pwd)
+cd ~/Downloads
+curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+bash Anaconda3-5.0.1-Linux-x86_64.sh
+cd $CUR_DIR
 
 #temporal exports
 export ZSH="/home/cristian/.oh-my-zsh"
