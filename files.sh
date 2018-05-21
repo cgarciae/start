@@ -1,4 +1,8 @@
 
+
+# clean
+rm -fr /tmp/cristian
+
 # make dir
 mkdir /tmp/cristian
 
