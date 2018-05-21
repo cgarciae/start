@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/cristian/.oh-my-zsh
+export ZSH=/home/cristian/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -139,13 +139,8 @@ export GOOGLE_APPLICATION_CREDENTIALS=/data/.gcp/wildfire.json
 
 
 # keychain
-keychain /data/.ssh/migrate
 keychain /data/.ssh/lenovo
 . ~/.keychain/`uname -n`-sh
-
-# mongo
-export ME_CONFIG_MONGODB_ADMINPASSWORD=AuoNEW35789
-export ME_CONFIG_MONGODB_AUTH_PASSWORD=AuoNEW35789
 
 source "/home/cristian/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 

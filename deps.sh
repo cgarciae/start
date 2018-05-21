@@ -8,6 +8,14 @@ sudo apt-get install -y \
     tmux \
     keychain
 
+
+# install anaconda
+sh -c "$(wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh -O -)"
+
+#temporal exports
+export ZSH="/home/cristian/.oh-my-zsh"
+export ZSH_CUSTOM="$ZSH/custom"
+
 # oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 

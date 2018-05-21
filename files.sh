@@ -10,4 +10,4 @@ mkdir /tmp/cristian
 git clone https://github.com/cgarciae/start /tmp/cristian/start
 
 # copy files
-cp /tmp/cristian/start/home-files/. ~
+cp -a /tmp/cristian/start/home-files/. ~
