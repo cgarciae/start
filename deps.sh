@@ -15,11 +15,18 @@ echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee 
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt-get update && sudo apt-get install -y google-cloud-sdk
 
-# install anaconda
+#install docker
+bash -c "$(wget https://get.docker.com/ -O -)"
+
+# go to downloads
 CUR_DIR=$(pwd)
 cd ~/Downloads
+
+# install anaconda
 curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 bash Anaconda3-5.0.1-Linux-x86_64.sh
+
+# back to folder
 cd $CUR_DIR
 
 #temporal exports
