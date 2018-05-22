@@ -7,7 +7,8 @@ sudo apt-get install -y \
     zsh \
     tmux \
     keychain \
-    curl
+    curl \
+    htop
 
 # install gcloud
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
