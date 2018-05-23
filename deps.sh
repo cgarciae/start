@@ -9,7 +9,8 @@ sudo apt-get install -y \
     keychain \
     curl \
     htop \
-    rsync
+    rsync \
+    inotify-tools
 
 # install gcloud
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
