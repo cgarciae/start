@@ -52,3 +52,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # change shell
  chsh -s /usr/bin/tmux
+
+# fish
+sudo apt-get install fish
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+fisher add rafaelrinaldi/pure
