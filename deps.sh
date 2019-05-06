@@ -12,11 +12,6 @@ sudo apt-get install -y \
     rsync \
     inotify-tools
 
-# install fisher + pure
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-fish
-fisher add rafaelrinaldi/pure
-
 # install gcloud
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
@@ -52,3 +47,8 @@ cd $CUR_DIR
 
 # change shell
 chsh -s /usr/bin/tmux
+
+# install fisher + pure
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+fish
+fisher add rafaelrinaldi/pure
