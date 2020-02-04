@@ -34,19 +34,8 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 sudo apt-get update
 sudo apt-get install nvidia-docker2
 
-# go to downloads
-CUR_DIR=$(pwd)
-cd ~/Downloads
-
-# install anaconda
-curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda3
-
-# back to folder
-cd $CUR_DIR
-
 # change shell
-chsh -s /usr/bin/tmux
+chsh -s /usr/bin/fish
 
 # install fisher + pure
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
