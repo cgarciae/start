@@ -28,6 +28,10 @@ sudo chmod +x /usr/local/bin/docker-compose
 # vscode
 sudo snap install vscode --classic
 
+# pyenv + peotry
+curl https://pyenv.run | bash
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+
 # change shell
 chsh -s /usr/bin/fish
 
