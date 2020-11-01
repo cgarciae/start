@@ -16,24 +16,24 @@ sudo apt-get install -y \
     
     
 # https://medium.com/@IsaacJK/setting-up-a-ubuntu-18-04-1-lts-system-for-deep-learning-and-scientific-computing-fab19f7ca39d
-sudo apt-get install vim csh flex gfortran libgfortran3 g++ \
+sudo apt-get install vim csh flex gfortran libgfortran5 g++ \
                      cmake xorg-dev patch zlib1g-dev libbz2-dev \
                      libboost-all-dev openssh-server libcairo2 \
                      libcairo2-dev libeigen3-dev lsb-core \
                      lsb-base net-tools network-manager \
-                     git-core git-gui git-doc xclip gdebi-core
+                     xclip gdebi-core
                      
 
 # https://www.pyimagesearch.com/2017/09/25/configuring-ubuntu-for-deep-learning-with-python/
 sudo apt-get install build-essential cmake git unzip pkg-config \
-    libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev \
+    libjpeg-dev libtiff5-dev libpng-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
     libxvidcore-dev libx264-dev \
     libgtk-3-dev \
-    install libhdf5-serial-dev graphviz \
+    libhdf5-dev graphviz \
     libopenblas-dev libatlas-base-dev gfortran \
-    python-tk python3-tk python-imaging-tk \
-    python3-dev \
+    python-tk python3-tk python-pil.imagetk \
+    python3-dev
 
 
 # install gcloud
@@ -43,21 +43,37 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt-get update && sudo apt-get install -y google-cloud-sdk
 
 #install docker
-sudo bash -c "$(wget https://get.docker.com/ -O -)"
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+    
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+   
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo usermod -aG docker $USER
 
 # docker-compose
 sudo curl -L https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
 # vscode
-sudo snap install vscode --classic
+sudo apt install -y snapd
+sudo snap install code --classic
 
-# pyenv deps
+# pyenv + peotry
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
     libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
     xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
-
-# pyenv + peotry
+    
 curl https://pyenv.run | bash
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 poetry config virtualenvs.in-project true
