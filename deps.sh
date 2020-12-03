@@ -74,6 +74,10 @@ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
     xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
     
 curl https://pyenv.run | bash
+# install desired version
+PYENV_VERSION="3.7.9"
+pyenv install $PYENV_VERSION
+pyenv global $PYENV_VERSION
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 poetry config virtualenvs.in-project true
 
