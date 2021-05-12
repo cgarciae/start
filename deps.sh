@@ -77,9 +77,7 @@ sudo apt install -y snapd
 sudo snap install code --classic
 
 # pyenv + peotry
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-    xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+sudo dnf install make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
     
 curl https://pyenv.run | bash
 # install desired version
