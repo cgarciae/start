@@ -11,6 +11,11 @@ curl -s -L https://nvidia.github.io/nvidia-docker/centos8/nvidia-docker.repo | s
 sudo dnf install -y nvidia-container-toolkit
 sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml
 
+# docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo dnf install -y podman-docker
+sudo systemctl start podman.socket
+
 # openssl
 sudo dnf install -y openssl
 
