@@ -1,6 +1,16 @@
 # update
 sudo dnf -y update
 
+# nvidia
+sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
+sudo dnf -y install nvidia-driver nvidia-settings
+
+# nvidia-containers
+# https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+curl -s -L https://nvidia.github.io/nvidia-docker/centos8/nvidia-docker.repo | sudo tee /etc/yum.repos.d/nvidia-docker.repo
+sudo dnf install -y nvidia-container-toolkit
+sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml
+
 # openssl
 sudo dnf install -y openssl
 
@@ -47,3 +57,7 @@ flatpak install flathub -y \
   us.zoom.Zoom \
   com.slack.Slack
 
+# fix gestures
+# install touche: https://github.com/JoseExposito/touchegg#red-hat-fedora-and-derivatives
+# install flatpak: flatpak install -y flathub com.github.joseexposito.touche
+# install gnome-extension: https://extensions.gnome.org/extension/4033/x11-gestures/
