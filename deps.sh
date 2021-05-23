@@ -4,11 +4,6 @@ sudo dnf -y update
 # openssl
 sudo dnf install -y openssl
 
-# vscode
-sudo dnf install -y snapd
-sudo ln -s /var/lib/snapd/snap /snap
-sudo snap install code --classic
-
 # pyenv + peotry
 sudo dnf install -y make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel    
 
@@ -36,3 +31,19 @@ fisher install rafaelrinaldi/pure
 # change shell
 sudo dnf install -y util-linux-user
 chsh -s /usr/bin/fish
+
+
+# vscode
+sudo dnf install -y snapd
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install code --classic
+
+# flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub -y \
+  com.getferdi.Ferdi \
+  com.microsoft.Teams \
+  us.zoom.Zoom \
+  com.slack.Slack
+
