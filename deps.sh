@@ -41,7 +41,7 @@ poetry config virtualenvs.in-project true
 # install fisher + pure
 sudo dnf install -y fish
 fish
-fisher install rafaelrinaldi/pure
+fisher install pure-fish/pure
 
 # change shell
 sudo dnf install -y util-linux-user
