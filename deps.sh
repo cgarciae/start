@@ -2,8 +2,9 @@
 sudo dnf -y update
 
 # nvidia
-sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
-sudo dnf -y install nvidia-driver nvidia-settings
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install akmod-nvidia
+sudo dnf install xorg-x11-drv-nvidia-cuda
 
 # nvidia-containers
 # https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
