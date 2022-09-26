@@ -19,3 +19,7 @@ sudo apt install -y fish
 fish -c 'curl -sL https://git.io/fisher | source'
 fish -c 'fisher install jorgebucaran/fisher'
 fish -c 'fisher install pure-fish/pure'
+
+# git
+git config --global user.name "Cristian Garcia"
+git config --global user.email "cgarcia.e88@gmail.com"
