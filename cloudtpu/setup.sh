@@ -5,7 +5,7 @@ sudo apt update
 # python
 sudo apt-get install -y \
   make cmake python-is-python3 libssl-dev libffi-dev \
-  libsqlite3-dev libedit-dev libncurses5-dev
+  libsqlite3-dev libedit-dev libncurses5-dev libbz2-dev
 
 # poetry
 pip install poetry
