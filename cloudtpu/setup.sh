@@ -22,3 +22,6 @@ git config --global user.email "cgarcia.e88@gmail.com"
 # create ssh key
 ssh-keygen -t ed25519 -C "cgarcia.e88@gmail.com" -f ~/.ssh/id_ed25519 -q -N ""
 cat ~/.ssh/id_ed25519.pub
+
+# pyenv
+curl https://pyenv.run | bash
