@@ -12,4 +12,5 @@ fish -c 'fisher install pure-fish/pure'
 # gcloud
 brew install --cask google-cloud-sdk
 
-#
+# python deps
+brew install cmake
