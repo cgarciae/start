@@ -14,3 +14,7 @@ brew install --cask google-cloud-sdk
 
 # python deps
 brew install cmake
+
+# git
+git config --global user.name "Cristian Garcia"
+git config --global user.email "cgarcia.e88@gmail.com"
