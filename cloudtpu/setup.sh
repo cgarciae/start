@@ -13,9 +13,7 @@ pip install poetry
 
 # fish
 sudo apt install -y fish
-fish -c 'curl -sL https://git.io/fisher | source'
-fish -c 'fisher install jorgebucaran/fisher'
-fish -c 'fisher install pure-fish/pure'
+fish -c 'curl -sL https://git.io/fisher | source && fisher install pure-fish/pure'
 
 # git
 git config --global user.name "Cristian Garcia"
