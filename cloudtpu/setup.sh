@@ -22,6 +22,9 @@ git config --global user.email "cgarcia.e88@gmail.com"
 # pyenv
 curl https://pyenv.run | bash
 
+# go (needed for jax-smi)
+sudo apt-get install golang
+
 # create ssh key
 echo ''
 echo Add this ssh key to github:
