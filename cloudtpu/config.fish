@@ -6,6 +6,8 @@ set -x PATH ~/.local/bin $PATH
 #----------------------------------------------------------------------
 # pyenv
 #----------------------------------------------------------------------
+set -x PYENV_ROOT $HOME/.pyenv
+command -v pyenv >/dev/null || set -x PATH $PYENV_ROOT/bin $PATH
 pyenv init - | source
 
 function dpython
