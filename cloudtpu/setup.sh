@@ -19,9 +19,11 @@ fish -c 'curl -sL https://git.io/fisher | source && fisher install pure-fish/pur
 git config --global user.name "Cristian Garcia"
 git config --global user.email "cgarcia.e88@gmail.com"
 
-# create ssh key
-ssh-keygen -t ed25519 -C "cgarcia.e88@gmail.com" -f ~/.ssh/id_ed25519 -q -N ""
-cat ~/.ssh/id_ed25519.pub
-
 # pyenv
 curl https://pyenv.run | bash
+
+# create ssh key
+echo ''
+echo Add this ssh key to github:
+ssh-keygen -t ed25519 -C "cgarcia.e88@gmail.com" -f ~/.ssh/id_ed25519 -q -N ""
+cat ~/.ssh/id_ed25519.pub
