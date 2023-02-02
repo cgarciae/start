@@ -4,8 +4,10 @@
 #-----------------------------
 
 # deps
+sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt-add-repository -y ppa:fish-shell/release-3
 sudo apt update
+sudo apt-get install git -y
 
 # python
 sudo apt-get install -y \
