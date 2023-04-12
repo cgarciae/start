@@ -30,7 +30,7 @@ git config --global user.email "cgarcia.e88@gmail.com"
 curl https://pyenv.run | bash
 
 # go (needed for jax-smi)
-sudo apt-get install golang
+sudo apt-get install -y golang
 
 # create ssh key
 echo ''
