@@ -18,3 +18,5 @@ end
 function tpu-device
     TPU_CHIPS_PER_PROCESS_BOUNDS=1,1,1 TPU_PROCESS_BOUNDS=1,1,1 TPU_VISIBLE_DEVICES=$argv[1] $argv[2..]
 end
+
+starship init fish | source
