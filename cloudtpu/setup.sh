@@ -20,7 +20,10 @@ pip install poetry
 
 # fish
 sudo apt install -y fish
-fish -c 'curl -sL https://git.io/fisher | source && fisher install pure-fish/pure'
+
+# starship
+curl -sS https://starship.rs/install.sh | sh
+starship preset pure-preset -o ~/.config/starship.toml
 
 # git
 git config --global user.name "Cristian Garcia"
