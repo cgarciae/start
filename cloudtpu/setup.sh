@@ -12,7 +12,7 @@ sudo apt-get install git -y
 # python
 sudo apt-get install -y \
   make cmake python-is-python3 libssl-dev libffi-dev \
-  libsqlite3-dev libedit-dev libncurses5-dev libbz2-dev
+  libsqlite3-dev libedit-dev libncurses5-dev libbz2-dev liblzma-dev libreadline-dev
 
 # poetry
 pip install poetry
@@ -31,6 +31,7 @@ git config --global user.email "cgarcia.e88@gmail.com"
 
 # pyenv
 curl https://pyenv.run | bash
+pyenv install 3.9
 
 # go (needed for jax-smi)
 sudo apt-get install -y golang
