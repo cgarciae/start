@@ -14,6 +14,9 @@ sudo apt-get install -y \
   make cmake python-is-python3 libssl-dev libffi-dev \
   libsqlite3-dev libedit-dev libncurses5-dev libbz2-dev liblzma-dev libreadline-dev
 
+# kitty
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+
 # helix
 sudo add-apt-repository ppa:maveonair/helix-editor
 sudo apt update
