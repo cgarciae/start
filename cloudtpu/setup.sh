@@ -14,6 +14,11 @@ sudo apt-get install -y \
   make cmake python-is-python3 libssl-dev libffi-dev \
   libsqlite3-dev libedit-dev libncurses5-dev libbz2-dev liblzma-dev libreadline-dev
 
+# helix
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix
+
 # poetry
 pip install poetry
 ~/.local/bin/poetry config virtualenvs.in-project true
