@@ -14,14 +14,6 @@ sudo apt-get install -y \
   make cmake python-is-python3 libssl-dev libffi-dev \
   libsqlite3-dev libedit-dev libncurses5-dev libbz2-dev liblzma-dev libreadline-dev
 
-# kitty
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-
-# helix
-sudo add-apt-repository ppa:maveonair/helix-editor
-sudo apt update
-sudo apt install helix
-
 # poetry
 pip install poetry
 ~/.local/bin/poetry config virtualenvs.in-project true
@@ -38,7 +30,11 @@ git config --global user.name "Cristian Garcia"
 git config --global user.email "cgarcia.e88@gmail.com"
 
 # pyenv
+rm -fr ~/.pyenv
 curl https://pyenv.run | bash
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 pyenv install 3.9
 
 # go (needed for jax-smi)
