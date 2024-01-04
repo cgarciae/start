@@ -22,7 +22,7 @@ pip install poetry
 sudo apt install -y fish
 
 # starship
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 starship preset pure-preset -o ~/.config/starship.toml
 
 # git
