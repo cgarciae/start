@@ -1,5 +1,5 @@
 #------ USAGE-----------------
-# curl https://raw.githubusercontent.com/cgarciae/start/master/cloudtpu/setup.sh | bash
+# mkdir -p ~/.config/fish && curl https://raw.githubusercontent.com/cgarciae/start/master/cloudtpu/setup.sh | bash
 # curl https://raw.githubusercontent.com/cgarciae/start/master/cloudtpu/config.fish -o ~/.config/fish/config.fish
 #-----------------------------
 
