@@ -35,7 +35,7 @@ curl https://pyenv.run | bash
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-pyenv install 3.9
+pyenv install 3.10
 
 # go (needed for jax-smi)
 sudo apt-get install -y golang
