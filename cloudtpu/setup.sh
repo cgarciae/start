@@ -14,9 +14,8 @@ sudo apt-get install -y \
   make cmake python-is-python3 libssl-dev libffi-dev \
   libsqlite3-dev libedit-dev libncurses5-dev libbz2-dev liblzma-dev libreadline-dev
 
-# poetry
-pip install poetry
-~/.local/bin/poetry config virtualenvs.in-project true
+# uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # fish
 sudo apt install -y fish
