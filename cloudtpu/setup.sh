@@ -28,14 +28,6 @@ starship preset pure-preset -o ~/.config/starship.toml
 git config --global user.name "Cristian Garcia"
 git config --global user.email "cgarcia.e88@gmail.com"
 
-# pyenv
-rm -fr ~/.pyenv
-curl https://pyenv.run | bash
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-pyenv install 3.10
-
 # go (needed for jax-smi)
 sudo apt-get install -y golang
 
