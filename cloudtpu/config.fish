@@ -1,15 +1,3 @@
-#----------------------------------------------------------------------
-# poetry
-#----------------------------------------------------------------------
-set -x PATH ~/.local/bin $PATH
-
-#----------------------------------------------------------------------
-# pyenv
-#----------------------------------------------------------------------
-set -x PYENV_ROOT $HOME/.pyenv
-command -v pyenv >/dev/null || set -x PATH $PYENV_ROOT/bin $PATH
-pyenv init - | source
-
 function dpython
     echo "Waiting for debugger..."
     python -m debugpy --listen localhost:5678 --wait-for-client $argv
